@@ -224,6 +224,7 @@ iframe {
 }
 
 .bubble .buttons {
+    width: 100%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -340,4 +341,44 @@ body > footer {
 body > footer p{
     text-align: center !important;
     font-style: italic !important;
+}
+
+/* REALLY BIG SCREENS */
+@media screen and (min-width: 2600px) {
+    .article #content {
+        padding: 25px 5vw 25px 5vw !important;
+    }
+
+    .article .container {
+        width: 100% !important;
+        max-width: 75vw !important;
+    }
+
+    .article .head {
+        width: 100% !important;
+        max-width: 75vw !important;
+        padding: .8vw 0;
+    }
+
+    h2 {
+        font-size: 1.2vw !important;
+    }
+
+    .article .head h1 {
+        font-size: 1.2vw !important;
+        line-height: 1vw !important;
+    }
+
+    .text {
+        font-size: 0.8vw;
+        line-height: 1vw;
+    }
+
+    nav ul #logo {
+        font-size: 1.5vw;
+    }
+    
+    nav li a {
+        font-size: 0.8vw;
+    }
 }
