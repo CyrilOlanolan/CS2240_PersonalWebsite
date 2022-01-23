@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Musika.</title>
+
+      <!-- BOOTSTRAP CSS -->
+      <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous"
+      />
+      <link href="PA2.css" rel="stylesheet" />
+      <link href="Artists.css" rel="stylesheet" />
+      <link rel="icon" href="PA2Assets/musika-icon.png"/>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark mx-4">
+      <div class="container pt-3">
+        <a class="navbar-brand" href="PA2.html">
+          <img src="PA2Assets/musika-logo.png" alt="Musika logo" class="musika-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <li class="nav-item">
+              <a class="nav-link" href="PA2.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="Artists.html">Artists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/CyrilOlanolan/CS2240_PersonalWebsite/tree/main/PA2">GitHub Repository</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVIGATION BAR END -->
+
+    <!-- STATIC GALLERY -->
+    <div class="container my-4 px-5">
+      <div class="row">
+          <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+          <div
+              class="bg-image hover-overlay ripple shadow-1-strong rounded"
+              data-ripple-color="light"
+          >
+              <img
+                  src="PA2Assets/over-october.jpg"
+                  class="w-100 shadow-1-strong rounded mb-4"
+                  alt="Over October"
+              />
+              <a href="#!" data-mdb-toggle="modal" data-mdb-target="#exampleModal1">
+                  <div class="mask" style="background-color: rgba(251, 251, 251, 0.2);"></div>
+              </a>
+          </div>
+      
+          <img
+              src="PA2Assets/iv-of-spades.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Wintry Mountain Landscape"
+          />
+          </div>
+      
+          <div class="col-lg-4 mb-4 mb-lg-0">
+          <img
+              src="PA2Assets/kz-tandingan.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="KZ Tandingan"
+          />
+      
+          <img
+              src="PA2Assets/silent sanctuary.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Silent Sanctuary"
+          />
+          </div>
+      
+          <div class="col-lg-4 mb-4 mb-lg-0">
+          <img
+              src="PA2Assets/the-juans.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="The Juans"
+          />
+      
+          <img
+              src="PA2Assets/arthur-nery.jpg"
+              class="w-100 shadow-1-strong rounded mb-4"
+              alt="Arthur Nery"
+          />
+          </div>
+      </div>
+    </div>
+    <!-- STATIC GALLERY END -->
+    
+    <div class="container">
+      <div class="line-break"></div>
+    </div>
+
+    <!-- CARDS -->
+    <div class="container my-5 px-5">
+        <div class="row gy-1">
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <div class="card w-100 h-100" style="width: 18rem;">
+                    <img src="PA2Assets/ben-and-ben-live.jpg" class="card-img-top" alt="Ben & Ben Live">
+                    <div class="card-body">
+                      <h5 class="card-title">Ben & Ben Live @ UST</h5>
+                      <p class="card-text">Watch this live performance of Araw-Araw by Ben & Ben at UST!</p>
+                      <button type="button" class="btn btn-yellow text-white inter-font" data-bs-toggle="modal" data-bs-target="#benandben">
+                        Watch Now!
+                      </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <div class="card w-100 h-100" style="width: 18rem;">
+                    <img src="PA2Assets/kz-tandingan-live.jpg" class="card-img-top" alt="Ben & Ben Live">
+                    <div class="card-body">
+                      <h5 class="card-title">KZ Tandingan Eraserheads Medley</h5>
+                      <p class="card-text">One of Asia's best popstar, KZ Tandingan, performs an Eraserhead medley LIVE!</p>
+                      <button type="button" class="btn btn-yellow text-white inter-font" data-bs-toggle="modal" data-bs-target="#kz-tandingan-live">
+                        Let's Go!
+                      </button>
+                    </div>
+                </div>
+            </div>
+    
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                <div class="card w-100 h-100" style="width: 18rem;">
+                    <img src="PA2Assets/arthur-nery-live.jpg" class="card-img-top" alt="Ben & Ben Live">
+                    <div class="card-body">
+                      <h5 class="card-title">Arthur Nery Pagsamo (Live)</h5>
+                      <p class="card-text">Rising star Arthur Nery performs his hit song, "Pagsamo", live at Lunch Out Loud!</p>
+                      <button type="button" class="btn btn-yellow text-white inter-font" data-bs-toggle="modal" data-bs-target="#arthur-nery-live">
+                        Audio On!
+                      </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CARDS END -->
+
+    <!-- MODALS -->
+    <div class="modal fade" id="benandben" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ben & Ben Live at UST</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container h-100">
+              <iframe class="w-100 h-100"
+                  src="https://www.youtube.com/embed/igiOJ0Tp8VY">
+              </iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="kz-tandingan-live" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Eraserheads Medley by KZ Tandingan</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container h-100">
+              <iframe class="w-100 h-100"
+                  src="https://www.youtube.com/embed/clJjhCpTl2A">
+              </iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="arthur-nery-live" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Pagsamo by Arthur Nery Live on LOL</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="container h-100">
+              <iframe class="w-100 h-100"
+                  src="https://www.youtube.com/embed/t3KARPlqbXs">
+              </iframe>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODALS END -->
+
+    <div class="container">
+      <div class="line-break"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center p-5">
+      <p class="text-white inter-font m-0">Applications Development and Emerging Technologies [4-303]</p>
+      <p class="text-white inter-font m-0">Performance Assessment #2</p>
+      <p class="text-white inter-font m-0">Responsive Design Inspiration:
+        <a href="https://www.netflix.com/ph/"><img src="PA2Assets/netflix-logo.png" alt="Netflix" height="50px" class="ps-1"></a>
+      </p>
+    </footer>
+    <!-- FOOTER END -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous">
+    </script>
+  </body>
+</html>

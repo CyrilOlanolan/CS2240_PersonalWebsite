@@ -1,0 +1,161 @@
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+}
+
+header {
+    height: 55vh;
+    width: 100%;
+    background-image: url("PA2Assets/musika-header-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0px 50px 250px -10px #000000, inset 0px -50px 250px -10px #000000;
+    position: relative;
+    background-attachment: fixed;
+}
+
+.yellow {
+    color: #FFB800;
+}
+
+header button {
+    max-height: 38px;
+}
+
+.musika-font {
+    font-family: "Concert One", "Helvetica", cursive, sans-serif;
+    font-weight: 400 !important;
+}
+
+.inter-font {
+    font-family: 'Inter', 'Helvetica', sans-serif;
+    font-style: normal;
+}
+
+h1 {
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 48px;
+    margin: 0;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 19px;
+    margin: 0;
+}
+
+.body-text {
+    font-size: 16px;
+}
+
+.musika-logo {
+    height: 30px;
+}
+
+/* BUTTON */
+.btn-yellow {
+    background: #FFB800;
+}
+
+.btn:active {
+    background-color: #be8a07 !important;
+}
+
+.store {
+    transition: .3s all;
+}
+
+.store:hover, .store:active {
+    color: #FFB800!important;
+    transition: .3s all;
+}
+
+#salute {
+    min-width: 82px;
+}
+
+/* Services */
+#featured-services .box {
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    background: #000000;
+    border: 2px solid #FFB800;
+    transition: all 0.3s ease-in-out;
+    border-radius: 15px;
+    width: 100%;
+}
+
+#app-mockup {
+    width: 100%;
+    max-width: 420px;
+}
+
+#newsletter-area {
+    width: 40%;
+    height: fit-content;
+}
+
+.line-break {
+    background-color: #FFB800;
+    width: 100%;
+    height: 2px;
+    border-radius: 60px;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #FFB800;
+    box-shadow: inset 0 1px 1px rgba(255, 184, 0, .075), 0 0 8px rgba(255, 184, 0, .6);
+}
+
+@media (max-width: 992px) {
+    header {
+        background-size: auto 100%;
+        padding-bottom: 30px;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+
+    #mockup div {
+        flex-wrap: wrap;
+        flex-basis: 50%;
+    }
+
+    #carousel {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+@media (max-width: 576px) {
+    header {
+        box-shadow: none;
+    }
+
+    h1 {
+        font-size: 39px;
+    }
+    
+    h2 {
+        font-size: 18px;
+    }
+
+    .body-text {
+        font-size: 12px;
+    }
+}

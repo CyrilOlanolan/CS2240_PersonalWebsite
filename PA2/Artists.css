@@ -1,0 +1,10 @@
+.modal-dialog {
+    height: 60vh;
+    max-width: none;
+}
+
+.modal-content {
+    width: 80vw;
+    height: 100%;
+    margin: 0 auto;
+}

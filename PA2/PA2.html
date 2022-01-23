@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Musika.</title>
+
+      <!-- BOOTSTRAP CSS -->
+      <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+          crossorigin="anonymous"
+      />
+      <link href="PA2.css" rel="stylesheet" />
+
+      <link rel="icon" href="PA2Assets/musika-icon.png"/>
+  </head>
+  <body>
+    <!-- NAVIGATION BAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark mx-4">
+      <div class="container pt-3">
+        <a class="navbar-brand" href="PA2.html">
+          <img src="PA2Assets/musika-logo.png" alt="Musika logo" class="musika-logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="PA2.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Artists.html">Artists</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/CyrilOlanolan/CS2240_PersonalWebsite/tree/main/PA2">GitHub Repository</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- NAVIGATION BAR END -->
+
+    <!-- HEADER -->
+    <header>
+      <div class="container d-flex flex-column align-items-center justify-content-center p-5 h-100">
+        <div class="mx-3 mx-lg-0">
+          <h1 class="musika-font text-white text-center mb-2 mb-md-3">Welcome to Musika<span class="yellow">.</span></h1>
+          <h2 class="inter-font text-white text-center mb-4">Listen anywhere. Cancel Anytime.</h2>
+          <p class="inter-font text-white text-center mb-3 body-text">Ready to listen? Enter your email to create or restart your membership.</p>
+          <div class="container d-flex align-items-center justify-content-center">
+              <form class="d-flex flex-wrap justify-content-center needs-validation" novalidate id="billing">
+                  <label for="email-bill" class="form-label mb-2">
+                    <input type="email" class="form-control" id="email-bill" placeholder="Email address" required>
+                    <div class="valid-feedback">
+                      Looks good!
+                    </div>
+                  </label>
+                  <button type="submit" class="btn btn-yellow text-white inter-font mb-2 mx-1" id="get-started">Get Started</button>
+              </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- HEADER END -->
+
+    <div class="container">
+      <div class="line-break"></div>
+    </div>
+
+    <!-- FEATURED SERVICES -->
+    <section id="featured-services" class="my-5">
+      <div class="container px-5">
+        <div class="row">
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-4 mb-lg-0">
+            <div class="box">
+              <span class="iconify mb-2" data-icon="bi:music-note-beamed" style="color: white; font-size: 40px;"></span>
+              <h4><p href="" class="text-white musika-font">OPM Music</p></h4>
+              <p class="text-white inter-font body-text">Listens to your favorite OPM music artists on-the-go!</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-4 mb-lg-0">
+            <div class="box">
+              <span class="iconify mb-2" data-icon="bi:headphones" style="color: white; font-size: 40px;"></span>
+              <h4><p href="" class="text-white musika-font">24/7 listening</p></h4>
+              <p class="text-white inter-font body-text">Unlimited streaming for you! Enjoy thousands of titles from Filipino artists.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-4 mb-lg-0">
+            <div class="box">
+              <span class="iconify mb-2" data-icon="bi:unlock-fill" style="color: white; font-size: 40px;"></span>
+              <h4><p href="" class="text-white musika-font">No Lockup</p></h4>
+              <p class="text-white inter-font body-text">Cancel anytime. No hidden fees.</p>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-4 mb-lg-0">
+            <div class="box">
+              <span class="iconify" data-icon="ic:baseline-high-quality" style="color: white; font-size: 40px;"></span>
+              <h4><p href="" class="text-white musika-font">Quality Streaming</p></h4>
+              <p class="text-white inter-font body-text">Highest streaming quality at 320 kbps in 16-bit!</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FEATURED SERVICES END -->
+
+    <div class="container">
+      <div class="line-break"></div>
+    </div>
+    
+    <!-- CAROUSEL -->
+    <div class="container my-5 p-0" id="carousel">
+      <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="PA2Assets/artist-zack-tabudlo.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="PA2Assets/artist-ben-and-ben.png" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="PA2Assets/artist-adie.png" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <!-- CAROUSEL END -->
+    
+    <div class="container">
+      <div class="line-break"></div>
+    </div>
+
+    <!-- MOCKUP -->
+    <div class="container my-5" id="mockup">
+      <div class="d-flex align-items-center flex mx-5 justify-content-center">
+        <div class="d-flex flex-column align-items-center">
+          <img src="PA2Assets/musika-logo.png" alt="Musika logo" class="musika-logo mb-4">
+          <h2 class="text-white inter-font text-center mb-3 me-lg-5">Available on major app stores.</h2>
+          <div class="d-flex flex-row justify-content-center">
+            <a href="https://play.google.com/"><span class="iconify mx-1 store" data-icon="teenyicons:google-play-store-solid" style="color: white; font-size: 30px;"></span></a>
+            <a href="https://appstore.huawei.com/"><span class="iconify mx-1 store" data-icon="simple-icons:huawei" style="color: white; font-size: 30px;"></span></a>
+            <a href="https://www.apple.com/ph/app-store/"><span class="iconify mx-1 store" data-icon="grommet-icons:apple-app-store" style="color: white; font-size: 30px;"></span></a>
+          </div>
+        </div>
+        <div">
+          <img src="PA2Assets/mock-ups.png" alt="IOS application mockup" id="app-mockup" class="mt-4 mt-lg-0 ms-lg-5">
+        </div>
+      </div>
+    </div>
+    <!-- MOCKUP END -->
+
+    <div class="container">
+      <div class="line-break"></div>
+    </div>
+
+    <!-- NEWSLETTER AREA -->
+    <div class="container my-5">
+      <div id="newsletter-area" class="mx-auto">
+        <h3 class="musika-font text-white text-center h1 mb-3">Newsletter<span class="yellow">.</span></h3>
+        <form class="row g-3 needs-validation" novalidate>
+          <div class="col-md-3">
+            <label for="salute" class="form-label inter-font text-white body-text">Salutation</label>
+            <select class="form-select" id="salute" required>
+              <option selected disabled value="">...</option>
+              <option>Mr.</option>
+              <option>Ms.</option>
+              <option>Mrs.</option>
+              <option>Mx.</option>
+            </select>
+            <div class="invalid-feedback">
+              Please select a valid state.
+            </div>
+          </div>
+          <div class="col-12 col-lg-9">
+            <label for="name" class="form-label inter-font text-white body-text">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="John Doe" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Yikes! You forgot to add a name.
+            </div>
+          </div>
+          <div class="col-md-12">
+            <label for="email" class="form-label inter-font text-white body-text">Email</label>
+            <input type="email" class="form-control" id="email" placeholder="johndoe@gmail.com" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+            <div class="invalid-feedback">
+              Enter a valid email address.
+            </div>
+          </div>
+          <div class="col-12">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+              <label class="form-check-label inter-font text-white body-text" for="invalidCheck">
+                Subscribe to newsletter
+              </label>
+              <div class="invalid-feedback">
+                You must agree before submitting.
+              </div>
+            </div>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-yellow text-white inter-font" type="submit">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- NEWSLETTER AREA END -->
+
+    <div class="container">
+      <div class="line-break"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="text-center p-5">
+      <p class="text-white inter-font m-0">Applications Development and Emerging Technologies [4-303]</p>
+      <p class="text-white inter-font m-0">Performance Assessment #2</p>
+      <p class="text-white inter-font m-0">Responsive Design Inspiration:
+        <a href="https://www.netflix.com/ph/"><img src="PA2Assets/netflix-logo.png" alt="Netflix" height="50px" class="ps-1"></a>
+      </p>
+    </footer>
+    <!-- FOOTER END -->
+
+    <!-- BOOTSTRAP SCRIPT -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous">
+    </script>
+
+    <!-- Validation Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="validation.js"></script>
+
+    <!-- ICONS -->
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+  </body>
+</html>
