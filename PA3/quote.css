@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    /* FONT */
+    font-family: "Roboto", Helvetica, sans-serif !important;
+}
+
+p,
+h1,
+h2 {
+    margin: 0;
+}
+
+:root {
+    /* COLORS */
+    --true-black: #000000;
+    --black: #1d1d1f;
+    --black2: #333333;
+    --blue: #0071e3;
+    --yellow: #f9e201;
+}
+
+.quote_area {
+    background-color: var(--true-black);
+    border-radius: 30px;
+    height: fit-content;
+    color: #FFFFFF;
+}
+
+.fade-in-up {
+    transform: translateY(-15px);
+    transition-duration: 2s;
+}
+
+label {
+    margin-top: .8rem;
+    margin-bottom: .3rem;
+    font-weight: 700;
+}
+
+legend {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: .8rem;
+    margin-bottom: 0;
+}
+
+fieldset {
+    margin-bottom: 1rem;
+}
+
+#request_quote {
+    margin-top: 2rem;
+}
+
+.invalid-feedback, .valid-feedback {
+    margin-top: .2rem;
+}
+
+#quote_storage-version .invalid-feedback {
+    color: red;
+}
+
+#quote_storage-version .valid-feedback {
+    color: green;
+}

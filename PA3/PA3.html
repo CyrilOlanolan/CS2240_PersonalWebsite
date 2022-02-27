@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Apple iPhone 13</title>
+        <link rel="icon" href="PA3assets/img/apple-logo.png" />
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+            crossorigin="anonymous"
+        />
+
+        <!-- J-QUERY & JQUERY UI -->
+        <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.js"></script>
+        <link rel="stylesheet" href="jquery-ui/jquery-ui.min.css" />
+
+        <!-- CSS -->
+        <link rel="stylesheet" href="PA3.css" />
+    </head>
+    <body>
+        <!-- LOADING -->
+        <div class="se-pre-con"></div>
+
+        <!-- NAVIGATION BAR -->
+        <div class="header">
+            <p class="text-center text-white m-0">Welcome to Apple Center!</p>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container py-2">
+                <div class="d-flex flex-row align-items-center">
+                    <a class="navbar-brand" href="PA3.html">
+                        <img src="PA3assets/img/apple-logo-black.svg" alt="Apple logo" id="nav_logo" />
+                    </a>
+                    <p class="m-0" id="nav_name">iPhone 13</p>
+                </div>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-center">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="PA3.html">Overview</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="prices.html">Prices</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quote.html">Get Quote</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="https://github.com/CyrilOlanolan/CS2240_PersonalWebsite/tree/main/PA3">GitHub Repository</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- NAVIGATION BAR END -->
+
+        <!-- WELCOME AREA -->
+        <div class="container welcome">
+            <h2 class="welcome_phone">iPhone 13 Pro</h2>
+            <h1 class="welcome_slogan">Oh. So. Pro.</h1>
+        </div>
+
+        <div class="welcome_video_area">
+            <video autoplay muted id="welcome_video">
+                <source src="PA3assets/vid/welcome_video.mp4" type="video/mp4" />
+            </video>
+            <img src="PA3assets/img/welcome_image.jpg" alt="iPhone 13 Pro" id="welcome_image" />
+        </div>
+        <!-- WELCOME AREA END -->
+
+        <div class="claim_area">
+            <div class="claim_container h-100">
+                <div class="container h-100 d-flex flex-column text-start justify-content-center px-5">
+                    <p class="claim">A more powerful camera system.</p>
+                    <p class="claim">A display so responsive, every interaction feels new again.</p>
+                    <p class="claim">The world’s fastest smartphone chip.</p>
+                    <p class="claim">Exceptional durability.</p>
+                    <p class="claim">And a huge leap in battery life.</p>
+                    <p class="claim pt-5">Let’s Pro.</p>
+                </div>
+            </div>
+            <div class="claim_loop_video_area">
+                <video muted loop autoplay id="claim_loop_video">
+                    <source src="PA3assets/vid/loop_background.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+
+        <div class="cinematic_container">
+            <div class="container" id="cinematic_text">
+                <div class="container_fit_content mx-auto">
+                    <h2>
+                        <strong>Shift the <span class="word_focus">focus.</span></strong>
+                    </h2>
+                    <h2>
+                        <strong>Up the <span class="word_drama">drama.</span></strong>
+                    </h2>
+                    <div class="d-flex justify-content-end">
+                        <h3>Presenting<br /><span>Cinematic mode</span></h3>
+                    </div>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-center">
+                <img src="PA3assets/img/cinematic.jpg" alt="Cinematic" id="cinematic_img" class="w-50" />
+            </div>
+        </div>
+
+        <div class="test-area px-5">
+            <div class="d-flex flex-column flex-wrap justify-content-center text-center pt-5 pb-5">
+                <h2>Test out UI samples.</h2>
+                <h2 class="pb-4">Drag screens into the frame!</h2>
+                <div class="d-flex justify-content-center flex-wrap">
+                    <img src="PA3assets/img/empty_frame.png" alt="Empty phone frame" id="empty_phone_frame" />
+                </div>
+                <p>Double click phone to reset.</p>
+            </div>
+            <div class="container pb-5">
+                <div class="row gy-3" id="sample_screens">
+                    <div class="col p-0 d-flex justify-content-center">
+                        <img src="PA3assets/img/sample_authentication.png" alt="authentication screen sample" />
+                    </div>
+                    <div class="col p-0 d-flex justify-content-center">
+                        <img src="PA3assets/img/sample_bills.png" alt="bills screen sample" />
+                    </div>
+                    <div class="col p-0 d-flex justify-content-center">
+                        <img src="PA3assets/img/sample_card_settings.png" alt="card settings screen sample" />
+                    </div>
+                    <div class="col p-0 d-flex justify-content-center">
+                        <img src="PA3assets/img/sample_entertainment.png" alt="entertainment screen sample" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="text-center p-5">
+            <p class="m-0">Applications Development and Emerging Technologies [4-303]</p>
+            <p class="m-0">Performance Assessment #3</p>
+            <p class="m-0">
+                Responsive Design Inspiration:
+                <a href="https://www.apple.com/">Apple's Landing Page</a>
+            </p>
+        </footer>
+
+        <!-- BOOTSTRAP -->
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"
+        ></script>
+
+        <!-- JQUERY & JQUERY UI -->
+        <script src="jquery-ui/external/jquery/jquery.js"></script>
+        <script src="jquery-ui/jquery-ui.min.js"></script>
+
+        <!-- SCRIPT -->
+        <script src="PA3.js"></script>
+    </body>
+</html>
