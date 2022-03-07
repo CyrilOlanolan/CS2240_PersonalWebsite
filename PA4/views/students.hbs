@@ -1,0 +1,49 @@
+<div class="container my-5">
+  <div class="bubble">
+    <h1 class="mt-2 mb-4">List of Students</h1>
+    <div class="row justify-content-between mb-3">
+      <div class="col-auto">
+        <form action="/students" method="POST" novalidate>
+          <div class="row g-3 align-items-center mb-3">
+            <div class="col-auto">
+              <label for="search" class="col-form-label">Search</label>
+            </div>
+            <div class="col-auto">
+              <input type="text" id="search" class="form-control" name="search" onchange="this.form.submit()">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="col-auto">
+        <a href="/students/add_student" class="btn btn-primary align-self-center" type="button">+ Add Student</a>
+      </div>
+    </div>
+    <div class="table-responsive">
+      <table class="table table-bordered table-hover table-striped">
+        <thead class="text-center">
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Middle Name</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each rows}}
+          <tr>
+            <th scope="row">{{ this.studentID }}</th>
+            <td>{{ this.studentLastName }}</td>
+            <td>{{ this.studentFirstName }}</td>
+            <td>{{ this.studentMiddleName }}</td>
+            <td class="text-center">
+              <a href="/students/update_student/{{ this.studentID }}" type="button" class="btn btn-light btn-small mb-2 mb-lg-0"><i class="bi bi-pencil me-2"></i>Update</a>
+              <a href="/students/{{ this.studentID }}" type="button" class="btn btn-light btn-small"><i class="bi bi-person-x me-2"></i>Delete</a>
+            </td>
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

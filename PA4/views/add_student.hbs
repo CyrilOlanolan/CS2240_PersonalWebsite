@@ -1,0 +1,28 @@
+<!-- BREADCRUMB -->
+<div class="container my-5">
+    <div class="bubble person-form">
+        <div class="container mt-2 mb-4">
+            <div aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="/students">Students</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Add Student</li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- ADD STUDENT FORM -->
+        <div class="container">
+            <!-- ALERT -->
+            {{#if alert}}
+            <div class="alert alert-success alert-dismissible fade show mb-4" role="alert">
+                <strong>{{alert}}</strong>
+                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            {{/if}}
+
+            <form action="/students/add_student" method="POST" class="needs-validation" id="creating">
+                {{> student_form}}
+            </form>
+        </div>
+    </div>
+</div>
