@@ -34,7 +34,7 @@ h2 {
 nav {
     position: sticky !important;
     top: 0;
-    z-index: 99999;
+    z-index: 998;
     background-color: var(--primary);
     width: 100%;
     height: fit-content;
@@ -123,4 +123,8 @@ body {
 .subject-form {
     width:75% !important;
     max-width: 720px !important;
+}
+
+.modal-backdrop {
+    z-index: 999;
 }

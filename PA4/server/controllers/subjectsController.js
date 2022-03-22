@@ -21,12 +21,13 @@ exports.view = (req, res) => {
         connection.query("SELECT * FROM subjects", (err, rows) => {
             // WHEN DONE WITH CONNECTION, RELEASE IT
             connection.release();
-
+            let message = req.flash();
             res.render("subjects", {
                 title: "Subjects",
                 css: ["styles.css"],
                 js: ["script.js"],
                 rows,
+                message: message,
             });
         });
     });
@@ -96,30 +97,6 @@ exports.submit = (req, res) => {
     });
 };
 
-// UPDATE SUBJECT FORM
-exports.edit = (req, res) => {
-    pool.getConnection((error, connection) => {
-        if (error) throw error; // NOT CONNECTED
-
-        //console.log("Connected! ID: " + connection.threadId);
-
-        // USE THE CONNECTION
-        connection.query("SELECT * FROM subjects WHERE subjectID = ?", [req.params.id], (err, rows) => {
-            // WHEN DONE WITH CONNECTION, RELEASE IT
-            connection.release();
-
-            if (!err) {
-                res.render("update_subject", {
-                    title: "Subjects: Update Subject Details",
-                    css: ["styles.css"],
-                    js: ["script.js"],
-                    rows,
-                });
-            } else console.log(err);
-        });
-    });
-};
-
 // UPDATE SUBJECT DETAILS
 exports.update = (req, res) => {
     pool.getConnection((error, connection) => {
@@ -149,13 +126,8 @@ exports.update = (req, res) => {
                             connection.release();
 
                             if (!err) {
-                                res.render("update_subject", {
-                                    title: "Subjects: Update Subject Details",
-                                    css: ["styles.css"],
-                                    js: ["script.js"],
-                                    alert: `${subjectTitle} has been updated successfully!`,
-                                    rows,
-                                });
+                                req.flash("success", `${subjectTitle} has been updated successfully!`)
+                                res.redirect("/subjects");
                             } else console.log(err);
                         });
                     });

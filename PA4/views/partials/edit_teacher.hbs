@@ -1,0 +1,28 @@
+<!-- BREADCRUMB -->
+<div class="container mt-2 mb-4">
+    <div aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/teachers">Teachers</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Edit Teacher</li>
+        </ol>
+    </div>
+</div>
+
+<!-- UPDATE STUDENT FORM -->
+<div class="container">
+    <form action="/teachers/update_teacher/{{this.teacherID}}" method="POST" class="needs-validation" id="updating">
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="teacherFirstName" value="{{this.teacherFirstName}}" placeholder="John" name="teacherFirstName" required>
+            <label for="teacherFirstName">First Name</label>
+        </div>
+        <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="teacherMiddleName" value="{{this.teacherMiddleName}}" placeholder="Kennedy" name="teacherMiddleName" required>
+            <label for="teacherMiddleName">Middle Name</label>
+        </div>
+        <div class="form-floating">
+            <input type="text" class="form-control" id="teacherLastName" value="{{this.teacherLastName}}" placeholder="Doe" name="teacherLastName" required>
+            <label for="teacherLastName">Last Name</label>
+        </div>
+        <button type="submit" class="btn btn-primary mt-4 py-3 w-100">Submit</button>
+    </form>
+</div>

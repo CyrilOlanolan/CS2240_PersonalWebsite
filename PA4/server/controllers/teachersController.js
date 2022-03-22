@@ -21,12 +21,13 @@ exports.view = (req, res) => {
         connection.query("SELECT * FROM teachers", (err, rows) => {
             // WHEN DONE WITH CONNECTION, RELEASE IT
             connection.release();
-
+            let message = req.flash();
             res.render("teachers", {
                 title: "Teachers",
                 css: ["styles.css"],
                 js: ["script.js"],
                 rows,
+                message: message,
             });
         });
     });
@@ -96,30 +97,6 @@ exports.submit = (req, res) => {
     });
 };
 
-// UPDATE TEACHER FORM
-exports.edit = (req, res) => {
-    pool.getConnection((error, connection) => {
-        if (error) throw error; // NOT CONNECTED
-
-        //console.log("Connected! ID: " + connection.threadId);
-
-        // USE THE CONNECTION
-        connection.query("SELECT * FROM teachers WHERE teacherID = ?", [req.params.id], (err, rows) => {
-            // WHEN DONE WITH CONNECTION, RELEASE IT
-            connection.release();
-
-            if (!err) {
-                res.render("update_teacher", {
-                    title: "Teachers: Update Teacher Details",
-                    css: ["styles.css"],
-                    js: ["script.js"],
-                    rows,
-                });
-            } else console.log(err);
-        });
-    });
-};
-
 // UPDATE TEACHER DETAILS
 exports.update = (req, res) => {
     pool.getConnection((error, connection) => {
@@ -149,13 +126,8 @@ exports.update = (req, res) => {
                             connection.release();
 
                             if (!err) {
-                                res.render("update_teacher", {
-                                    title: "Teachers: Update Teacher Details",
-                                    css: ["styles.css"],
-                                    js: ["script.js"],
-                                    alert: `${teacherFirstName} ${teacherLastName} has been updated successfully!`,
-                                    rows,
-                                });
+                                req.flash("success", `${teacherFirstName} ${teacherLastName} has been updated successfully!`)
+                                res.redirect("/teachers");
                             } else console.log(err);
                         });
                     });

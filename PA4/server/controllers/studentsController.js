@@ -21,12 +21,13 @@ exports.view = (req, res) => {
         connection.query("SELECT * FROM students", (err, rows) => {
             // WHEN DONE WITH CONNECTION, RELEASE IT
             connection.release();
-
+            let message = req.flash();
             res.render("students", {
                 title: "Students",
                 css: ["styles.css"],
                 js: ["script.js"],
                 rows,
+                message: message,
             });
         });
     });
@@ -96,30 +97,6 @@ exports.submit = (req, res) => {
     });
 };
 
-// UPDATE STUDENT FORM
-exports.edit = (req, res) => {
-    pool.getConnection((error, connection) => {
-        if (error) throw error; // NOT CONNECTED
-
-        //console.log("Connected! ID: " + connection.threadId);
-
-        // USE THE CONNECTION
-        connection.query("SELECT * FROM students WHERE studentID = ?", [req.params.id], (err, rows) => {
-            // WHEN DONE WITH CONNECTION, RELEASE IT
-            connection.release();
-
-            if (!err) {
-                res.render("update_student", {
-                    title: "Students: Update Student Details",
-                    css: ["styles.css"],
-                    js: ["script.js"],
-                    rows,
-                });
-            } else console.log(err);
-        });
-    });
-};
-
 // UPDATE STUDENT DETAILS
 exports.update = (req, res) => {
     pool.getConnection((error, connection) => {
@@ -149,13 +126,8 @@ exports.update = (req, res) => {
                             connection.release();
 
                             if (!err) {
-                                res.render("update_student", {
-                                    title: "Students: Update Student Details",
-                                    css: ["styles.css"],
-                                    js: ["script.js"],
-                                    alert: `${studentFirstName} ${studentLastName} has been updated successfully!`,
-                                    rows,
-                                });
+                                req.flash("success", `${studentFirstName} ${studentLastName} has been updated successfully!`)
+                                res.redirect("/students");
                             } else console.log(err);
                         });
                     });

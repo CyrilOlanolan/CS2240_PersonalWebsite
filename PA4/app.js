@@ -5,6 +5,8 @@ const exphbs = require("express-handlebars");
 const path = require("path");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
+const flash = require("express-flash");
+const session = require("express-session")
 const PORT = process.env.PORT || 5000;
 
 require("dotenv").config();
@@ -30,6 +32,12 @@ app.engine(
     })
 );
 app.set("view engine", ".hbs");
+
+app.use(session({ cookie: { maxAge: 60000 }, 
+    secret: 'woot',
+    resave: false, 
+    saveUninitialized: false}));
+app.use(flash());
 
 // MYSQL CONNECTION POOL
 const pool = mysql.createPool({
